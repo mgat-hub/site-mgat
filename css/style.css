@@ -64,7 +64,7 @@ body.mbg{
     top: 0;
     left: 0;
     bottom: 0;
-    width: 260px;
+    width: 280px;
     background: rgba(10,35,66,.95);
     backdrop-filter: blur(10px);
     border-right: 1px solid rgba(255,255,255,.1);
@@ -78,6 +78,22 @@ body.mbg{
 
 .sidebar .logo {
     margin-bottom: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255,255,255,.12);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.15);
+    backdrop-filter: blur(8px);
+}
+
+.sidebar .logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    filter: none;
 }
 
 .sidebar nav ul {
@@ -91,10 +107,13 @@ body.mbg{
     text-decoration: none;
     font-weight: 500;
     transition: color .3s;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
 }
 
 .sidebar nav a:hover {
     color: var(--gold);
+    background: rgba(255,194,14,.12);
 }
 
 /* Overlay escuro quando sidebar aberta no mobile */
@@ -108,8 +127,9 @@ body.mbg{
 
 /* Main content com margin-left para sidebar */
 .main-content {
-    margin-left: 260px;
+    margin-left: 280px;
     min-height: 100vh;
+    padding-top: 2rem;
 }
 
 /* Hero - ajustado para não ter padding-top excessivo (era para header fixo) */
