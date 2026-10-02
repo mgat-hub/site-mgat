@@ -135,12 +135,12 @@ body.mbg{
 /* Hero - ajustado para não ter padding-top excessivo (era para header fixo) */
 .hero{
     position:relative;
-    height:100vh;
+    min-height: 100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    padding:0 2rem;
+    padding: 6rem 2rem 4rem;
 }
 
 .hero-img{
@@ -175,7 +175,28 @@ body.mbg{
     position:relative;
     z-index:1;
     text-align:center;
-    padding-top:4rem;
+    padding-top: 2rem;
+}
+
+/* Garantir separação visual da próxima secção */
+.hero + .section {
+    margin-top: 2rem;
+}
+
+/* Mobile: ajustes finos */
+@media (max-width: 768px) {
+    .hero {
+        padding: 8rem 1.5rem 5rem;
+    }
+    .hero-content {
+        padding-top: 1rem;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
 }
 
 .hero h2{
