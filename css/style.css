@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* DEBUG: teste visual - remover depois */
-body { background: red !important; }
-
 :root{
     --navy:#0A2342;
     --navy2:#152C34;
@@ -152,7 +149,7 @@ body.mbg{
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    padding: 6rem 2rem 4rem;
+    padding: 8rem 2rem 6rem !important;
 }
 
 .hero-img{
@@ -176,9 +173,12 @@ body.mbg{
 
 .hero-content{
     position:relative;
-    z-index:1;
+    z-index:10;
     text-align:center;
-    padding-top: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* Garantir separação visual da próxima secção */
@@ -188,14 +188,16 @@ body.mbg{
 
 .hero h2{
     font-size:2.5rem;
-    margin-bottom:1rem;
+    margin-bottom:1rem !important;
+    line-height: 1.2;
     color:var(--white);
 }
 
 .hero p{
-    font-size:1.2rem;
+    font-size:1.3rem;
+    margin-bottom:2rem !important;
+    line-height: 1.5;
     color:#d0d0d0;
-    margin-bottom:2rem;
 }
 
 .btn{
@@ -249,12 +251,15 @@ body.mbg{
 .cards-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:1.5rem;
+    gap:2rem !important;
     max-width:1200px;
     margin:0 auto;
+    padding:2rem 1rem;
 }
 
 .card{
+    position:relative;
+    z-index:1;
     background:rgba(255,255,255,.1);
     backdrop-filter:blur(10px);
     border:1px solid rgba(255,255,255,.2);
