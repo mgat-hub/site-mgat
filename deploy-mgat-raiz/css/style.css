@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --navy:#0A2342;
+    --navy2:#152C34;
+    --gold:#FFC20E;
+    --gold2:#D8A837;
+    --green:#2E9D45;
+    --green2:#5A9E4B;
+    --blue:#1E7FCB;
+    --blue2:#2D8AE0;
+    --white:#fff;
+    --beige:#F8F6EF;
+    --beige2:#E3DCC7;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+    background:var(--navy);
+}
+
+/* Background pattern */
+body.mbg{
+    background:url('../MGAT_Kit_Visual/MGAT_Kit/fundos/padrao-repetivel.svg') repeat,
+    radial-gradient(900px 700px at 90% 8%,rgba(255,194,14,.30),transparent 60%),
+    radial-gradient(900px 800px at 6% 100%,rgba(90,158,75,.55),transparent 60%),
+    linear-gradient(135deg,#0A2342 0%,#124A86 38%,#1E7FCB 66%,#2E9D45 100%);
+    background-attachment:scroll,fixed,fixed,fixed;
+    background-size:512px,auto,auto,auto;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding:0.5rem 1rem;
+    background:rgba(10,35,66,.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+ }
+
+header .logo{
+    width:140px;
+    margin-right:auto;
+}
+
+nav ul{
+    display:flex;
+    gap:2rem;
+    list-style:none;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* Hero */
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    padding:0 2rem;
+}
+
+.hero-img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+}
+
+.hero-img-desktop{
+    display:block;
+}
+
+.hero-img-mobile{
+    display:none;
+    max-width:400px;
+}
+
+@media(max-width:768px){
+    .hero-img-desktop{
+        display:none;
+    }
+    .hero-img-mobile{
+        display:block;
+    }
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+    text-align:center;
+    padding-top:120px;
+}
+
+.hero h2{
+    font-size:2.5rem;
+    margin-bottom:1rem;
+    color:var(--white);
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#d0d0d0;
+    margin-bottom:2rem;
+}
+
+.btn{
+    font-family:'Poppins';
+    font-weight:700;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    cursor:pointer;
+    transition:.18s;
+    padding:0.8rem 1.5rem;
+    text-decoration:none;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:var(--navy);
+    box-shadow:0 10px 26px rgba(255,194,14,.40),inset 0 2px 0 rgba(255,255,255,.55);
+    margin-top:1rem;
+}
+
+.btn-primary:hover{
+    background:#FFD13F;
+    transform:translateY(-2px);
+    box-shadow:0 16px 34px rgba(255,194,14,.55),inset 0 2px 0 rgba(255,255,255,.7);
+}
+
+.btn-primary:active{
+    background:var(--gold2);
+    transform:translateY(1px);
+    box-shadow:0 4px 10px rgba(216,168,55,.45),inset 0 3px 6px rgba(10,35,66,.25);
+}
+
+/* Sections */
+.section{
+    padding:4rem 2rem 6rem;
+    max-width:1200px;
+    margin:0 auto;
+    scroll-margin-top:4rem;
+ }
+
+.section h2{
+    text-align:center;
+    margin-bottom:3rem;
+    color:var(--white);
+    font-size:2rem;
+}
+
+/* Cards */
+.cards-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.card{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:2rem;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    background:rgba(255,255,255,.2);
+}
+
+.card-icon{
+    width:48px;
+    height:48px;
+    background:rgba(255,255,255,.2);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 1rem;
+    font-size:1.5rem;
+}
+
+/* Turmas card */
+.turmas-card{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:2rem;
+    text-align:center;
+    margin:0 auto;
+    max-width:300px;
+}
+
+.card h3{
+    margin-bottom:0.5rem;
+    color:var(--white);
+}
+
+.card p{
+    color:#d0d0d0;
+    font-size:0.9rem;
+}
+
+/* Sobre card */
+.sobre-card{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:2rem;
+    text-align:center;
+    max-width:300px;
+    margin:0 auto;
+}
+
+footer{
+    background:var(--navy2);
+    padding:2rem;
+    text-align:center;
+    margin-top:4rem;
+}
+
+footer p{
+    color:#aaa;
+    font-size:0.9rem;
+}
+
+/* Formulário de Reserva */
+.reserva-form{
+    width:100%;
+    max-width:480px;
+    margin:2rem auto 0;
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    gap:0.75rem;
+    box-sizing:border-box;
+ }
+
+.reserva-form label{
+    display:block;
+    position:static;
+    width:100%;
+    margin:0.5rem 0 0.25rem;
+    line-height:1.4;
+}
+
+.reserva-form input,
+.reserva-form select{
+    display:block;
+    position:static;
+    width:100%;
+    min-width:0;
+    min-height:48px;
+    margin:0;
+    padding:0.75rem 1rem;
+    box-sizing:border-box;
+    line-height:1.4;
+}
+
+.reserva-form button{
+    display:block;
+    position:static;
+    width:100%;
+    min-height:48px;
+    margin-top:1rem;
+    box-sizing:border-box;
+}
+
+.reserva-form #reserva-mensagem{
+    margin-top:1rem;
+    text-align:center;
+    font-size:0.9rem;
+    min-height:1.2em;
+}
+
+@media (max-width:768px){
+    .reserva-form{
+        width:100%;
+        max-width:100%;
+        padding:1.25rem;
+        gap:0.6rem;
+    }
+
+    .reserva-form input,
+    .reserva-form select,
+    .reserva-form button{
+        width:100%;
+        font-size:16px;
+    }
+}
