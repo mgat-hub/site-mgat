@@ -59,3 +59,37 @@ Como conheceu: ${conhecimento}`;
         window.open(url, '_blank');
     });
 }
+
+// Sidebar hamburger logic
+const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+const overlay = document.querySelector('.sidebar-overlay');
+
+function toggleSidebar() {
+    const isOpen = sidebar.classList.toggle('open');
+    overlay.classList.toggle('visible');
+    document.body.classList.toggle('sidebar-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+}
+
+hamburger?.addEventListener('click', toggleSidebar);
+overlay?.addEventListener('click', toggleSidebar);
+
+// Fechar sidebar ao clicar num link (mobile)
+sidebar?.querySelectorAll('a[href^="#"]').forEach(a =>
+    a.addEventListener('click', () => {
+        if (window.innerWidth <= 768) toggleSidebar();
+    })
+);
+
+// Fechar sidebar ao redimensionar para desktop
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('visible');
+        document.body.classList.remove('sidebar-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Abrir menu');
+    }
+});
