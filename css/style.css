@@ -14,6 +14,15 @@
     --beige2:#E3DCC7;
 }
 
+/* Container global */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -162,41 +171,16 @@ body.mbg{
     max-width:400px;
 }
 
-@media(max-width:768px){
-    .hero-img-desktop{
-        display:none;
-    }
-    .hero-img-mobile{
-        display:block;
-    }
-}
-
 .hero-content{
     position:relative;
     z-index:1;
     text-align:center;
-    padding-top: 2rem;
+    padding-top: 0;
 }
 
 /* Garantir separação visual da próxima secção */
 .hero + .section {
     margin-top: 2rem;
-}
-
-/* Mobile: ajustes finos */
-@media (max-width: 768px) {
-    .hero {
-        padding: 8rem 1.5rem 5rem;
-    }
-    .hero-content {
-        padding-top: 1rem;
-    }
-    .hero h2 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1.1rem;
-    }
 }
 
 .hero h2{
@@ -275,6 +259,13 @@ body.mbg{
     padding:2rem;
     text-align:center;
     transition:.3s;
+}
+
+/* Classe .glass usada nos cards do HTML */
+.glass {
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.15);
 }
 
 .card:hover{
@@ -388,24 +379,23 @@ footer p{
     min-height:1.2em;
 }
 
-@media (max-width:768px){
-    .reserva-form{
-        width:100%;
-        max-width:100%;
-        padding:1.25rem;
-        gap:0.6rem;
+@media (max-width: 768px) {
+    /* Formulário */
+    .reserva-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.25rem;
+        gap: 0.6rem;
     }
 
     .reserva-form input,
     .reserva-form select,
-    .reserva-form button{
-        width:100%;
-        font-size:16px;
+    .reserva-form button {
+        width: 100%;
+        font-size: 16px;
     }
-}
 
-/* ===== RESPONSIVO: Mobile (<= 768px) ===== */
-@media (max-width: 768px) {
+    /* Hamburger & Sidebar */
     .hamburger {
         display: block;
     }
@@ -424,10 +414,32 @@ footer p{
         margin-left: 0;
     }
 
-    .hero-content {
-        padding-top: 6rem; /* espaço para hamburger */
+    /* Hero */
+    .hero {
+        padding: 8rem 1.5rem 5rem;
     }
 
+    .hero-img-desktop {
+        display: none;
+    }
+
+    .hero-img-mobile {
+        display: block;
+    }
+
+    .hero-content {
+        padding-top: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Sections */
     .section {
         scroll-margin-top: 6rem;
     }
