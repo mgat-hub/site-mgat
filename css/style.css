@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* DEBUG: teste visual - remover depois */
+body { background: red !important; }
+
 :root{
     --navy:#0A2342;
     --navy2:#152C34;
