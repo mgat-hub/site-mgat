@@ -232,6 +232,34 @@ body.mbg{
     box-shadow:0 4px 10px rgba(216,168,55,.45),inset 0 3px 6px rgba(10,35,66,.25);
 }
 
+/* Botão secundário */
+.btn-secondary{
+    background:transparent;
+    color:var(--white);
+    border:2px solid var(--gold);
+    margin-top:1rem;
+}
+
+.btn-secondary:hover{
+    background:var(--gold);
+    color:var(--navy);
+    transform:translateY(-2px);
+}
+
+.btn-secondary:active{
+    background:var(--gold2);
+    transform:translateY(1px);
+}
+
+/* Layout dos botões do hero */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
 /* Sections */
 .section{
     padding:4rem 2rem 6rem;
