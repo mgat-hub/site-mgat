@@ -1,0 +1,6 @@
+{
+  "buildCommand": "echo 'static site'",
+  "outputDirectory": ".",
+  "devCommand": "echo 'no dev'",
+  "installCommand": "echo 'no install'"
+}
